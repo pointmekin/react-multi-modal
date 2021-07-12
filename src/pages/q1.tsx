@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 
 import { useHistory } from "react-router-dom"
 import { ModalContext } from "../contexts/modalContext"
@@ -26,7 +26,7 @@ const Q1 = () => {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.classList.add("overflow-hidden")
     window.addEventListener("popstate", onPopState)
     return () => {
